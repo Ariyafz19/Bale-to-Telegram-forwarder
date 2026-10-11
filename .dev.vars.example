@@ -1,0 +1,18 @@
+# نمونهٔ فایل متغیرهای محلی — این فایل را کپی کنید به .dev.vars و مقادیر را خودتان پر کنید
+# .dev.vars در .gitignore قرار دارد و هرگز آپلود نمی‌شود.
+# برای محیط واقعی حتماً secret ها را با wrangler secret put هم ست کنید.
+
+# توکن ربات تلگرام از @BotFather
+TELEGRAM_BOT_TOKEN="123456:ABC-YourBotTokenHere"
+
+# آیدی عددی گروه تلگرام مقصد (مثلاً از @getidsbot در گروه)
+TELEGRAM_CHAT_ID="-1001234567890"
+
+# آیدی عمومی کانال در بلِه (همان چیزی که بعد از ble.ir/s/ می‌آید، بدون @)
+BALE_CHANNEL="your_bale_channel"
+
+# برچسب فارسی برای شروع پیام‌ها (برچسب کانال)
+BALE_LABEL="نام کانال"
+
+# کلید دسترسی endpoint ها — یک رشتهٔ تصادفی طولانی بسازید؛ همهٔ endpoint های ادمین با آن محافظت می‌شوند
+ADMIN_KEY="change-me-to-a-long-random-string"

@@ -1,0 +1,17 @@
+{
+  "name": "bale-to-telegram-forwarder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Forward Bale group messages to a Telegram group via Cloudflare Workers (free tier)",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --test-scheduled",
+    "tail": "wrangler tail",
+    "test-local": "node scripts/test-local.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

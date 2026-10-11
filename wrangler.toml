@@ -1,0 +1,16 @@
+name = "bale-to-telegram-forwarder"
+main = "src/index.js"
+compatibility_date = "2024-10-02"
+
+# توکن‌ها و آیدی‌ها به‌صورت Secret ست شده‌اند: npx wrangler secret put <NAME>
+# (در فایل .dev.vars برای اجرای محلی نگه دارید — .dev.vars در .gitignore هست)
+
+[[kv_namespaces]]
+binding = "OFFSET_KV"
+id = "YOUR_KV_NAMESPACE_ID"                        # npx wrangler kv namespace create OFFSET_KV
+# preview_id = "YOUR_KV_PREVIEW_ID"                # برای اجرای محلی با --remote (اختیاری)
+
+[triggers]
+# اولی: چک کردن کانال هر ۷ دقیقه (بین ۵ تا ۱۰ دقیقه تنظیم می‌شود؛ کمتر از ۵ دقیقه مصرف پلن رایگان را بالا می‌برد)
+# دومی: یادآور صبح ساعت ۷:۰۰ به وقت تهران (۳:۳۰ UTC) — فقط شنبه/دوشنبه/چهارشنبه/پنجشنبه
+crons = ["*/7 * * * *", "30 3 * * *"]
